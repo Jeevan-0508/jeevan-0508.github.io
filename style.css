@@ -92,3 +92,8 @@ ul.feed a{flex:1;min-width:0;text-decoration:none;color:var(--ink)}
 ul.feed a:hover{text-decoration:underline;color:var(--accent)}
 ul.feed i{font-style:normal;color:var(--faint);font-size:11px;flex:none}
 @media(max-width:860px){.inner.two{grid-template-columns:1fr;gap:20px}}
+
+h3.group{margin:6px 18px 0;padding:14px 0 0;font-size:11px;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--faint);font-weight:700;border-top:1px solid var(--line)}
+#work .panel>h2+h3.group,#work h2+h3.group{border-top:none}
+.panel>h3.group:first-of-type{border-top:none}

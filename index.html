@@ -44,15 +44,16 @@
         <li><b>The same discipline elsewhere.</b> A control room that derives which AI regulations a
         system attracts, and holds the evidence behind every control.</li>
       </ol>
-      <p class="note">All three are static, dependency-free and run entirely in your browser. Nothing you
+      <p class="note">Every tool here is static, dependency-free and run entirely in your browser. Nothing you
       type is transmitted, logged or stored.</p>
     </div>
   </section>
 
   <section class="panel" id="work">
     <h2>Work <em>live, not screenshots</em></h2>
-    <div class="cards">
 
+    <h3 class="group">Freight &amp; carrier fraud</h3>
+    <div class="cards">
       <article class="card">
         <h3>Freight &amp; Carrier Fraud Risk Taxonomy</h3>
         <p class="lede">An open, structured taxonomy of fraud and cargo-loss patterns in European road
@@ -92,6 +93,23 @@
       </article>
 
       <article class="card">
+        <h3>FOMO &mdash; German logistics risk monitor</h3>
+        <p class="lede">A standing watch on German and EU supply-chain risk news: cargo theft, phantom
+        carriers, freight fraud, insolvency, regulatory change and disruption, in English and German.</p>
+        <p class="hard"><b>The hard part:</b> keeping it honest and cheap &mdash; public news feeds only,
+        classified into risk themes, re-scanned every six hours by a scheduled job, with no scraping of
+        anything that forbids it.</p>
+        <ul class="chips"><li>EN + DE sources</li><li>re-scans every 6h</li><li>zero infrastructure</li></ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/FOMO/">Open the monitor</a>
+          <a href="https://github.com/Jeevan-0508/FOMO">Source</a>
+        </p>
+      </article>
+    </div>
+
+    <h3 class="group">Governance &amp; compliance</h3>
+    <div class="cards">
+      <article class="card">
         <h3>AI Risk Control Room</h3>
         <p class="lede">A control room for an AI governance programme: an inventory of AI systems, the
         obligations each one attracts under the EU AI Act, GDPR, ISO/IEC 42001 and the NIST AI RMF, and
@@ -112,19 +130,45 @@
       </article>
 
       <article class="card">
-        <h3>FOMO &mdash; German logistics risk monitor</h3>
-        <p class="lede">A standing watch on German and EU supply-chain risk news: cargo theft, phantom
-        carriers, freight fraud, insolvency, regulatory change and disruption, in English and German.</p>
-        <p class="hard"><b>The hard part:</b> keeping it honest and cheap &mdash; public news feeds only,
-        classified into risk themes, re-scanned every six hours by a scheduled job, with no scraping of
-        anything that forbids it.</p>
-        <ul class="chips"><li>EN + DE sources</li><li>re-scans every 6h</li><li>zero infrastructure</li></ul>
+        <h3>AI Compliance Scanner</h3>
+        <p class="lede">A fast self-assessment for a single AI system against three frameworks &mdash;
+        the EU AI Act, ISO/IEC 42001 and the NIST AI RMF &mdash; each with its own independent score, in
+        under ten minutes.</p>
+        <p class="hard"><b>Not the Control Room, on purpose:</b> the Control Room manages a whole
+        programme's inventory over time; this answers one question quickly &mdash; <em>where does this
+        one system stand today?</em> The EU AI Act path is a 4-step wizard whose risk questions each map
+        to a specific article (5, 50, 51&ndash;55, Annex III), with a plain-English "explain why" behind
+        every one.</p>
+        <ul class="chips">
+          <li>3 frameworks, independent scores</li><li>14 risk-qualifier questions</li>
+          <li>NIST GOVERN&middot;MAP&middot;MEASURE&middot;MANAGE</li><li>one-click HTML report</li>
+          <li>installable PWA, offline</li>
+        </ul>
         <p class="links">
-          <a class="go" href="https://jeevan-0508.github.io/FOMO/">Open the monitor</a>
-          <a href="https://github.com/Jeevan-0508/FOMO">Source</a>
+          <a class="go" href="https://jeevan-0508.github.io/eu-ai-act-scanner/">Run the scanner</a>
+          <a href="https://github.com/Jeevan-0508/eu-ai-act-scanner">Source</a>
         </p>
       </article>
 
+      <article class="card">
+        <h3>GDPR Compliance Scanner</h3>
+        <p class="lede">Screen any data file for personal data before you share, upload or archive it.
+        It reads the file itself, in your browser, and flags which columns look like personal data and
+        which GDPR article each one engages.</p>
+        <p class="hard"><b>Deliberately a screening tool, not a verdict:</b> it answers "what is in here
+        that I should look at?", never "are we compliant?". A header pass and value-pattern detectors
+        rank findings by severity and layer on ENISA severity, NIST impact and DPIA screening &mdash; so
+        a human makes the actual call.</p>
+        <ul class="chips">
+          <li>Excel &middot; CSV &middot; PDF &middot; Word &middot; images (OCR)</li>
+          <li>9 value-pattern detectors</li><li>ENISA &middot; NIST &middot; DPIA screening</li>
+          <li>screening, not a verdict</li><li>installable PWA, offline</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/gdpr-compliance-scanner/">Run the scanner</a>
+          <a href="https://github.com/Jeevan-0508/gdpr-compliance-scanner">Source</a>
+        </p>
+      </article>
     </div>
   </section>
 
@@ -132,7 +176,7 @@
     <h2>Latest <em>regenerated every six hours from real activity</em></h2>
     <!-- activity:start -->
     <div class="inner two">
-      <div><h4>Latest commits</h4><ul class="feed"><li><b>jeevan-0508.github.io</b> <span>Portfolio page: four repositories as one body of work</span><i>2026-09-06</i></li><li><b>ai-governance-control-room</b> <span>Add the operator console: an empty, editable inventory with a boot readout</span><i>2026-09-06</i></li><li><b>FOMO</b> <span>Automated scan: 2026-09-06 04:00 UTC</span><i>2026-09-06</i></li><li><b>freight-risk-atlas</b> <span>Add JK brand mark to the README and the site header</span><i>2026-09-05</i></li><li><b>freight-fraud-taxonomy</b> <span>Add JK brand mark to the README and the site header</span><i>2026-09-05</i></li></ul></div>
+      <div><h4>Latest commits</h4><ul class="feed"><li><b>jeevan-0508.github.io</b> <span>Three scheduled jobs: correct the figures, refresh the activity strip, inspect the deployed site</span><i>2026-09-06</i></li><li><b>ai-governance-control-room</b> <span>Add the operator console: an empty, editable inventory with a boot readout</span><i>2026-09-06</i></li><li><b>FOMO</b> <span>Automated scan: 2026-09-06 04:00 UTC</span><i>2026-09-06</i></li><li><b>freight-risk-atlas</b> <span>Add JK brand mark to the README and the site header</span><i>2026-09-05</i></li><li><b>freight-fraud-taxonomy</b> <span>Add JK brand mark to the README and the site header</span><i>2026-09-05</i></li></ul></div>
       <div><h4>Freight risk signals <em>from FOMO</em></h4><ul class="feed"><li><a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQMjAyYWx1VjhmcnFZNExHcml5aFVRTXJBc21ZNEpjUC04ekg3Zmo4Sml5Q3NDT3dNcVRZeF8weXU2UW5rUjZXbzB4OVNfSlF1RHJlb0Z4VnY4WW5ZdFJjanJDSDRuVGx2OFZ4SEVzbC1fTUlnMGcxclpCVmRKZUdra0xpWmVva3pURWNsa1RoNVNINjNmT3VNdE5RZXpkNUw4Yldv?oc=5" rel="nofollow noopener">New Trojan Driver Cargo Theft Scam Bypasses Carrier Vetting Systems</a><i>Cargo Theft &middot; truckinginfo.com</i></li><li><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQaGJyNVlZNE95NWlaSUx2ZDZ3RXRrQTRmNkxwc0JKUGlDdTNIUVJ2QURoTzBTYnIwNFNGOHdPUk5iSU5pNEN2SWJ0bTNwN2ZmYllXSk51WDlGQklwcDU3VnVSUExTN0RTRzJMZEw0ZjQ2Z2xhdGdIWERkTC1zUC1yRTZTRkVaU3lLRG53YnNwVk5yeHd1V0NTdDFENDQ5eXBiSWt2aGR1a1dmUlpCQmJnZENWeDgtRV90UUhRQ1dGUHVyc3I0RWdCdmpLbTltR3h0cUJsWTd2eDZtSmxBaHc?oc=5" rel="nofollow noopener">Fake carriers attack freight exchanges: How organized crime groups steal cargo and drive companies into bankruptcy</a><i>Missing Trailer / Phantom Carrier &middot; Eurodebt.eu</i></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNVHB4R3ZlV2NhRERDbnd3Q3FRR0NyZW9wNnM4eWQzdFRQSjZfcXFkeklndkRINEhMRTF2UWlNLVE3bGszd09rTWFRVnZpUWRWcE5mblRWTS15alYzTlpCYlNQSkdoN3VBLUtCWkQ3Wl9qdVBhUWctNGtCcFYtMXhXUzlWNk10M1d4?oc=5" rel="nofollow noopener">Florissant man pleads not guilty in $250K grocery fraud case</a><i>Carrier / Freight Fraud &middot; KTTN</i></li><li><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNYnoxSVlCUnNMVktxb2U1TEtKTkN3aC0yT3pqajRRc0M5akktbWd0QWtvNWVBYW1URkhBcDM1c0lZc1Nianp6RVdMa0lQNEZSQ1VHQ1NBX2c2NUxSQml0QlhDUXJIM185U3h4V1lIVWx1d2YzSTB2SXJnck9qQUdxbzV0WUJ2MXRIYVRfUExLUVR5QjhETWc?oc=5" rel="nofollow noopener">A wave of bankruptcies among business giants. Europe under pressure.</a><i>Corporate Insolvency &middot; Eurodebt.eu</i></li><li><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxQa3FNNUhkaHliOGJpUDJGN0dMWHVXLUZwNVFvMzZFX0IxT19HaGZuOXJ2V0NoU3J4a0pabVF2T2hxYUdnclhlZUhCQ01CQjJIcDF5TkUxUGd3WXE4aU9vWDFGX1pObk9FdE9BTklicEY0amZObnNCTi1fbTJSbmdiZDlrX2lIcC1ZN1YwRXRiT2NwYVlKVjRDZUVHR2xfaDM4RXFFaHZmZHNhWE52Qkk1bVVBa0hnODdPRFA3NXlTWktNZjJva3ZaYzZMZFhfVjRnSmRDUGt6QW4?oc=5" rel="nofollow noopener">VW audits Xinjiang plant as rights group pressures car makers</a><i>Regulatory / Compliance Risk &middot; Reuters</i></li></ul></div>
     </div>
     <!-- activity:end -->

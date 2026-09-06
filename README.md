@@ -11,6 +11,8 @@ repositories legible as one body of work:
 | [Freight Risk Atlas](https://github.com/Jeevan-0508/freight-risk-atlas) | an assessment engine over it |
 | [AI Risk Control Room](https://github.com/Jeevan-0508/ai-governance-control-room) | the same discipline applied to AI regulation |
 | [FOMO](https://github.com/Jeevan-0508/FOMO) | a standing watch on German logistics risk news |
+| [AI Compliance Scanner](https://github.com/Jeevan-0508/eu-ai-act-scanner) | fast self-assessment against the EU AI Act, ISO 42001 and NIST AI RMF |
+| [GDPR Compliance Scanner](https://github.com/Jeevan-0508/gdpr-compliance-scanner) | a personal-data linter that screens a file before you share it |
 
 Every figure quoted on the page is counted from the source data of the repository it describes, not
 written by hand.
