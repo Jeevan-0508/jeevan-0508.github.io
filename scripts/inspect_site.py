@@ -94,6 +94,8 @@ def main():
     for url in sorted(set(re.findall(r'href="(https?://[^"]+)"', html))):
         if 'news.google.com' in url:
             continue                            # syndicated redirectors, expected to churn
+        if 'linkedin.com' in url:
+            continue                            # LinkedIn answers bots with 999, never 200
         code = status_of(url)
         if code != 200:
             note('major', 'link resolves', '%s -> %s' % (url, code))
