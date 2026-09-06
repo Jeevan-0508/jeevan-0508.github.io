@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jeevan Siddhabhaktula — Risk. Governance. AI.</title>
+<meta name="description" content="Freight fraud and AI governance work: an open fraud taxonomy, an assessment engine built on it, and a control room for AI regulatory obligations. Every tool is live and inspectable.">
+<link rel="icon" href="assets/jk-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="titlebar">
+      <span class="brand"><img src="assets/jk-logo.png" alt=""></span>
+      <div>
+        <h1>Jeevan Siddhabhaktula</h1>
+        <p class="tag">Risk &middot; Governance &middot; AI</p>
+      </div>
+    </div>
+    <p class="sub">I investigate freight and carrier fraud &mdash; missing trailers, phantom carriers,
+    double brokering, insider collusion &mdash; across European and North American lanes. The tools below
+    are what that work taught me, rebuilt in the open so anyone can check the reasoning rather than
+    take my word for it.</p>
+    <p class="meta">EU work authorisation held &middot; open to loss prevention and AI governance roles in Germany
+    &middot; <a href="https://github.com/Jeevan-0508">github.com/Jeevan-0508</a></p>
+  </div>
+</header>
+
+<main>
+
+  <section class="panel" id="thread">
+    <h2>One idea, three instruments <em>why these fit together</em></h2>
+    <div class="inner">
+      <p>Risk work fails in a predictable way: a threat gets named, everyone agrees it is serious, and
+      nothing changes &mdash; because nobody wrote down which signals actually distinguish it from an
+      ordinary bad day. So I built the layers in order.</p>
+      <ol class="thread">
+        <li><b>A data model.</b> An open taxonomy of freight fraud patterns, where every indicator is
+        weighted, stage-tagged, and paired with the innocent explanation that mimics it.</li>
+        <li><b>An instrument on top of it.</b> An assessment engine that turns what you can actually
+        observe into a ranked, arguable finding &mdash; and refuses to call it a probability.</li>
+        <li><b>The same discipline elsewhere.</b> A control room that derives which AI regulations a
+        system attracts, and holds the evidence behind every control.</li>
+      </ol>
+      <p class="note">All three are static, dependency-free and run entirely in your browser. Nothing you
+      type is transmitted, logged or stored.</p>
+    </div>
+  </section>
+
+  <section class="panel" id="work">
+    <h2>Work <em>live, not screenshots</em></h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3>Freight &amp; Carrier Fraud Risk Taxonomy</h3>
+        <p class="lede">An open, structured taxonomy of fraud and cargo-loss patterns in European road
+        freight &mdash; the reference layer everything else is built on.</p>
+        <p class="hard"><b>The hard part:</b> every pattern carries a <code>false_positives</code> block
+        &mdash; the benign cause that produces the same signal, and the check that separates them. That is
+        the part published threat lists leave out, and the part that decides whether an investigator
+        trusts the model.</p>
+        <ul class="chips">
+          <li>12 patterns</li><li>8 categories</li><li>77 indicators</li>
+          <li>31 documented false positives</li><li>137 countermeasures</li>
+          <li>11 public sources</li><li>CC BY 4.0</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/freight-fraud-taxonomy/">Browse the taxonomy</a>
+          <a href="https://github.com/Jeevan-0508/freight-fraud-taxonomy">Source</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Freight Risk Atlas</h3>
+        <p class="lede">An assessment engine over that taxonomy. Scope a movement, record what you can
+        observe, and it tells you which patterns the evidence supports &mdash; with the false positives to
+        rule out first and the countermeasures that still apply at that stage.</p>
+        <p class="hard"><b>The hard part:</b> it reports <em>indicator coverage</em>, never a probability
+        of fraud, and it never counts <em>Unknown</em> as <em>Absent</em> &mdash; unknowns are reported as
+        weighted evidence gaps with their own completeness score. A tool that quietly treats missing
+        evidence as exculpatory is worse than no tool.</p>
+        <ul class="chips">
+          <li>77 indicators scored</li><li>coverage, not probability</li>
+          <li>40% of detection weight lands after the loss</li><li>86 automated assertions</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/freight-risk-atlas/">Run an assessment</a>
+          <a href="https://github.com/Jeevan-0508/freight-risk-atlas">Source</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>AI Risk Control Room</h3>
+        <p class="lede">A control room for an AI governance programme: an inventory of AI systems, the
+        obligations each one attracts under the EU AI Act, GDPR, ISO/IEC 42001 and the NIST AI RMF, and
+        the evidence behind every control.</p>
+        <p class="hard"><b>The hard part:</b> applicability is <em>derived</em> from each requirement's
+        own conditions and never stored on a control, so one honest change to a system's purpose
+        re-tiers it everywhere at once. 29 controls answer 70 requirement links; 8 of them satisfy three
+        or more frameworks &mdash; evidenced once, reported four times.</p>
+        <ul class="chips">
+          <li>4 frameworks</li><li>56 cited requirements</li><li>29 controls</li>
+          <li>84 evidence artefacts</li><li>70 requirement links</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/ai-governance-control-room/">Demo programme</a>
+          <a class="go" href="https://jeevan-0508.github.io/ai-governance-control-room/docs/live/">Operator console</a>
+          <a href="https://github.com/Jeevan-0508/ai-governance-control-room">Source</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>FOMO &mdash; German logistics risk monitor</h3>
+        <p class="lede">A standing watch on German and EU supply-chain risk news: cargo theft, phantom
+        carriers, freight fraud, insolvency, regulatory change and disruption, in English and German.</p>
+        <p class="hard"><b>The hard part:</b> keeping it honest and cheap &mdash; public news feeds only,
+        classified into risk themes, re-scanned every six hours by a scheduled job, with no scraping of
+        anything that forbids it.</p>
+        <ul class="chips"><li>EN + DE sources</li><li>re-scans every 6h</li><li>zero infrastructure</li></ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/FOMO/">Open the monitor</a>
+          <a href="https://github.com/Jeevan-0508/FOMO">Source</a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="panel" id="how">
+    <h2>How I verify this <em>the part I would want to interrogate</em></h2>
+    <div class="inner">
+      <ul class="how">
+        <li><b>Tested against the deployed site, not localhost.</b> Every tool is checked by headless
+        assertions run against its public URL, including an independent recomputation of its own
+        arithmetic. A build that only passes on my machine has not been tested.</li>
+        <li><b>The data validates itself.</b> Each repository ships a schema and a dependency-free
+        validator that runs in CI and refuses a malformed model, so a bad edit fails loudly rather than
+        rendering a plausible wrong answer.</li>
+        <li><b>No invented numbers.</b> The atlas has no geographic heat map, because credible cargo-crime
+        incident data is paywalled and I will not fabricate hotspots to make a page look better. Where a
+        figure is modelled rather than observed, it says so.</li>
+        <li><b>Nothing employer-specific.</b> No internal thresholds, no real carriers, no case data. The
+        judgement is transferable; the confidential material stays where it belongs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel" id="about">
+    <h2>Background</h2>
+    <div class="inner">
+      <p>Six years in transportation risk and fraud operations, most recently on a central risk team
+      handling carrier fraud investigations across EU and NA lanes &mdash; missing trailers, pilferage,
+      identity fraud, double brokering, GPS spoofing and internal collusion &mdash; working with business
+      conduct, insurance and worldwide operational security. The recurring lesson is the one these tools
+      encode: the expensive failures are almost never a missing signal, they are a signal nobody could
+      separate from noise in time to act.</p>
+      <p>I also write. <a href="https://github.com/Jeevan-0508/a-conversation-with-existence">A
+      Conversation With Existence</a> is a philosophical memoir, and it is here for the same reason the
+      code is: I would rather be judged on things I actually finished.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Built as static HTML with no dependencies and no tracking. <a href="https://github.com/Jeevan-0508/jeevan-0508.github.io">Source of this page</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
