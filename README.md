@@ -14,3 +14,22 @@ repositories legible as one body of work:
 
 Every figure quoted on the page is counted from the source data of the repository it describes, not
 written by hand.
+
+## The three scheduled jobs
+
+Every six hours, driven by real signals only. Nothing writes prose, and nothing
+commits unless a fact has changed.
+
+| Job | Cadence | What it may change | What it may never do |
+|---|---|---|---|
+| `refresh` — figures | every 6h | rewrites a quoted number to match the source data it came from | invent a figure, or touch a sentence |
+| `refresh` — activity | every 6h | regenerates the *Latest* section from real pushes and FOMO signals | write a timestamp, so a quiet run makes no commit |
+| `inspect` | every 6h, offset 30m | nothing at all — it opens or updates one issue | edit the page, or close a finding on your behalf |
+
+`scripts/refresh.py` recounts every `data-fig` on the page from the source data
+of the repository that figure describes, so the page cannot drift from the truth
+it claims. It is idempotent: running it twice produces an identical file.
+
+`scripts/inspect_site.py` tests the deployed URL — structure, contact route,
+image and page weight, link rot, and whether the repositories the page sends
+people to actually describe themselves. Findings are a decision for a human.
