@@ -38,6 +38,15 @@ TEMPLATES = {
     'req_links':         '{v} requirement links',
 }
 
+# The 9 repos carrying the daily inspect_site / check_figures bots. Only
+# these are polled for open findings -- adding a repo to the site elsewhere
+# doesn't put it on this list.
+MONITORED_REPOS = [
+    'dora-compliance-scanner', 'freight-fraud-taxonomy', 'freight-risk-atlas',
+    'ai-governance-control-room', 'gdpr-compliance-scanner', 'eu-ai-act-scanner',
+    'risk-os', 'FOMO', 'shrink-signal',
+]
+
 
 def get(url, accept='application/json'):
     req = urllib.request.Request(url, headers={
@@ -161,6 +170,31 @@ def recent_signals(limit=5):
     return out
 
 
+def bot_reports(limit=8):
+    """Open inspect_site / check_figures findings across the monitored repos.
+
+    Each bot closes its own issue on the next clean run, so 'open' is the
+    whole signal -- nothing here is ever stale by more than a day.
+    """
+    out = []
+    for repo in MONITORED_REPOS:
+        try:
+            issues = get('%s/repos/%s/%s/issues?labels=inspection,figures&state=open'
+                          % (API, USER, repo))
+        except Exception as e:
+            print('WARN %s: %s' % (repo, e), file=sys.stderr)
+            continue
+        for i in issues:
+            if 'pull_request' in i:
+                continue
+            label = next((l['name'] for l in i['labels']
+                          if l['name'] in ('inspection', 'figures')), 'bot')
+            out.append({'repo': repo, 'title': i['title'], 'url': i['html_url'],
+                        'label': label, 'date': i['updated_at'][:10]})
+    out.sort(key=lambda x: x['date'], reverse=True)
+    return out[:limit]
+
+
 def render_activity(pushes, signals):
     rows = ''.join(
         '<li><b>%s</b> <span>%s</span><i>%s</i></li>' % (esc(p['repo']), esc(p['subject']), esc(p['date']))
@@ -177,8 +211,17 @@ def render_activity(pushes, signals):
         '    </div>' % (rows, news))
 
 
-def splice(html, block):
-    a, b = '<!-- activity:start -->', '<!-- activity:end -->'
+def render_bots(reports):
+    rows = ''.join(
+        '<li><b>%s</b> <a href="%s" rel="nofollow noopener">%s</a><i>%s &middot; %s</i></li>' % (
+            esc(r['repo']), esc(r['url']), esc(r['title']), esc(r['label']), esc(r['date']))
+        for r in reports) or (
+        '<li><span>No open findings across the 9 monitored repos &mdash; all clean.</span></li>')
+    return '<div class="inner"><ul class="feed">%s</ul></div>' % rows
+
+
+def splice(html, block, name='activity'):
+    a, b = '<!-- %s:start -->' % name, '<!-- %s:end -->' % name
     i, j = html.index(a) + len(a), html.index(b)
     new = '\n    ' + block + '\n    '
     return html[:i] + new + html[j:], html[i:j] != new
@@ -196,6 +239,9 @@ def main():
 
     html, moved = splice(html, render_activity(recent_commits(), recent_signals()))
     print('activity: %s' % ('updated' if moved else 'unchanged'))
+
+    html, bots_moved = splice(html, render_bots(bot_reports()), name='bots')
+    print('bots: %s' % ('updated' if bots_moved else 'unchanged'))
 
     if html == original:
         print('nothing to commit')
