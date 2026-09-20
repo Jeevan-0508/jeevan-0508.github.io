@@ -112,6 +112,33 @@
       </article>
     </div>
 
+    <h3 class="group">Financial crime intelligence</h3>
+    <div class="cards">
+      <article class="card">
+        <h3>RISK//RING &mdash; Financial Crime Network Intelligence</h3>
+        <p class="lede">A trained fraud classifier with honest metrics, SHAP explainability, and
+        graph-based collusion-ring detection &mdash; evaluated against known ground truth instead of
+        asserted. Simulates a transaction network with injected rings running real FATF typologies
+        (structuring, layering, round-tripping), because the standard public fraud dataset has no
+        account IDs and can't support any network analysis.</p>
+        <p class="hard"><b>The hard part:</b> the first run scored 100% precision and recall &mdash;
+        a sign the simulation was leaking, not a good result. Found the amount-distribution bug behind
+        it, added deliberate false-positive pressure, and shipped the honest number instead: 0.82
+        precision at 1.0 recall. Community detection on a naive graph recovers rings but pulls in
+        90%+ unrelated accounts (0.07 precision); a documented resolution sweep gets that to 0.76
+        precision / 0.77 recall without hiding the trade-off.</p>
+        <ul class="chips">
+          <li>20 rings, 3 FATF typologies</li><li>0.82 precision &middot; 0.995 PR-AUC</li>
+          <li>SHAP on every flagged case</li><li>0.77 recall / 0.76 precision ring recovery</li>
+          <li>10 tests, zero backend</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/risk-ring/">Open the console</a>
+          <a href="https://github.com/Jeevan-0508/risk-ring">Source</a>
+        </p>
+      </article>
+    </div>
+
     <h3 class="group">Governance &amp; compliance</h3>
     <div class="cards">
       <article class="card">
