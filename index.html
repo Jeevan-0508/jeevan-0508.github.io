@@ -222,6 +222,26 @@
           <a href="https://github.com/Jeevan-0508/gdpr-compliance-scanner">Source</a>
         </p>
       </article>
+      <article class="card">
+        <h3>reg-search &mdash; BM25 Over 56 Cited Requirements</h3>
+        <p class="lede">Natural-language search over the same 56 requirements behind the Control Room
+        above, ranked by a BM25 implementation written from scratch &mdash; no embeddings, no external
+        model, no API key. Type a plain question and see which article actually matches, and which exact
+        terms earned it that rank.</p>
+        <p class="hard"><b>The hard part:</b> the honest limit of going lexical on purpose. Indexing the
+        article citation itself (&ldquo;Art. 72&rdquo;) alongside the requirement text let the number in
+        a query like &ldquo;72 hours&rdquo; false-match an unrelated article numbered 72 &mdash; found by
+        running real queries against the live index before shipping, not by inspection. Fixed by indexing
+        only title and summary; the citation stays display-only.</p>
+        <ul class="chips">
+          <li>56 requirements, 4 frameworks</li><li>BM25 from scratch, 11 tests</li>
+          <li>zero embeddings, zero API key</li><li>works double-clicked from disk</li>
+        </ul>
+        <p class="links">
+          <a class="go" href="https://jeevan-0508.github.io/reg-search/">Search the requirements</a>
+          <a href="https://github.com/Jeevan-0508/reg-search">Source</a>
+        </p>
+      </article>
     </div>
   </section>
 
