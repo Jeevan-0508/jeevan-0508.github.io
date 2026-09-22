@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Sprint — Jeevan Siddhabhaktula</title>
+<meta name="description" content="29 repositories, 600+ commits, 1,500+ tests: a retrospective of the last chapter at Amazon, written down before it becomes just a memory.">
+<link rel="icon" href="../assets/jk-logo.png">
+<link rel="stylesheet" href="../style.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.stat{background:var(--panel);padding:22px 18px;text-align:center}
+.stat b{display:block;font-size:30px;color:var(--accent);letter-spacing:-.01em}
+.stat span{display:block;font-size:12px;color:var(--faint);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.timeline{margin:0;padding:0;list-style:none;max-width:900px}
+.timeline li{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:12px 0;
+  border-top:1px solid var(--line)}
+.timeline li:first-child{border-top:none}
+.timeline .date{color:var(--faint);font-size:12px;font-family:ui-monospace,Menlo,monospace;
+  padding-top:2px}
+.timeline .what b{color:var(--ink)}
+.timeline .what{color:var(--dim);font-size:14px}
+.timeline .what a{color:var(--accent);text-decoration:none}
+.timeline .what a:hover{text-decoration:underline}
+
+.bars{margin:0;padding:0;max-width:760px}
+.bar-row{display:grid;grid-template-columns:180px 1fr 60px;gap:12px;align-items:center;
+  margin-bottom:10px;font-size:13px}
+.bar-row .name{color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{background:var(--panel2);border-radius:4px;height:10px;overflow:hidden}
+.bar-fill{background:var(--accent);height:100%;border-radius:4px}
+.bar-row .n{color:var(--faint);text-align:right;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+
+.closing{max-width:720px;color:var(--dim);font-size:14.5px;line-height:1.75}
+.closing p{margin:0 0 14px}
+.closing p:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="titlebar">
+      <span class="brand"><img src="../assets/jeevan.jpg" width="240" height="240" alt="Jeevan Siddhabhaktula"></span>
+      <div>
+        <h1>The Sprint</h1>
+        <p class="tag">One chapter, closed honestly</p>
+      </div>
+    </div>
+    <p class="sub">Twenty-two days between resigning and leaving Amazon &mdash; the same days spent
+    building the tools on the <a href="../">main page</a>, in the open, in public repositories, with
+    real commit timestamps that don't lie about how any of this actually happened. This page exists
+    because the work deserved to be written down before it became just a memory.</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="panel">
+    <h2>By the numbers <em>every figure below is grep-checked against real git history, not recalled</em></h2>
+    <div class="stats">
+      <div class="stat"><b>29</b><span>public repositories</span></div>
+      <div class="stat"><b>600+</b><span>commits</span></div>
+      <div class="stat"><b>1,500+</b><span>automated tests, green</span></div>
+      <div class="stat"><b>22</b><span>days, Sep 1 &ndash; Sep 22</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How it actually happened <em>first commit dates, not memory</em></h2>
+    <div class="inner">
+      <ul class="timeline">
+        <li><span class="date">Sep 1</span><span class="what"><b>eu-ai-act-scanner</b> begins &mdash; a
+          4-step wizard that maps each risk question to a specific EU AI Act article.</span></li>
+        <li><span class="date">Sep 2</span><span class="what"><b>gdpr-compliance-scanner</b> &mdash;
+          screens a file for personal data before it gets shared, entirely in the browser.</span></li>
+        <li><span class="date">Sep 5</span><span class="what"><b>freight-fraud-taxonomy</b> and
+          <b>freight-risk-atlas</b> &mdash; the open pattern library and the assessment engine built on
+          top of it, false positives documented alongside every indicator.</span></li>
+        <li><span class="date">Sep 6</span><span class="what"><b>ai-governance-control-room</b> and the
+          <b>portfolio site</b> itself both begin &mdash; four frameworks, one evidence model.</span></li>
+        <li><span class="date">Sep 7</span><span class="what"><b>scale-of-everything</b> and
+          <b>quantum-galaxy</b> &mdash; the science side, built for the same reason as the rest: to be
+          explored, not just looked at.</span></li>
+        <li><span class="date">Sep 8</span><span class="what"><b>shrink-signal</b> and the
+          <b>Thekkethundiyil Kudumbayogam</b> family site &mdash; not every project has to be about
+          fraud.</span></li>
+        <li><span class="date">Sep 9</span><span class="what"><b>risk-os</b> &mdash; an operational risk
+          register that runs entirely client-side, no account, no server.</span></li>
+        <li><span class="date">Sep 10</span><span class="what"><b>dora-compliance-scanner</b> &mdash;
+          19 cited requirements across ICT risk, incident-reporting and resilience testing.</span></li>
+        <li><span class="date">Sep 11</span><span class="what"><b>fraud-watch</b> begins &mdash; the
+          biggest single build of the sprint, a 69-phase freight-fraud arcade game.</span></li>
+        <li><span class="date">Sep 13</span><span class="what"><b>risk-swarm</b> begins &mdash; seven
+          named agents investigate a real repository together, one of them built to attack the
+          others.</span></li>
+        <li><span class="date">Sep 18</span><span class="what"><b>risk-replay</b> &mdash; reconstructing
+          a decision's lineage after the fact, not just logging that one was made.</span></li>
+        <li><span class="date">Sep 19</span><span class="what"><b>policy-audit</b> and
+          <b>ruleshift</b> &mdash; an AI-governance evidence auditor and a game, same week.</span></li>
+        <li><span class="date">Sep 20</span><span class="what"><b>risk-ring</b> and
+          <b>nightfall-zero</b> &mdash; a fraud classifier honest about its own leakage bug, and a
+          character renderer with a name: The Survivor.</span></li>
+        <li><span class="date">Sep 21</span><span class="what"><b>shadow-network</b> and
+          <b>hakai-world</b> &mdash; a persistent synthetic economy a BYOK AI council investigates
+          without ever seeing the answer key.</span></li>
+        <li><span class="date">Sep 22</span><span class="what">Two days before the last day at Amazon,
+          still shipping: SHADOW//NETWORK gets its card on the homepage, and this page gets written
+          &mdash; with <a href="https://github.com/Jeevan-0508">Aki and Akisa</a>, the way most of it
+          got built.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Where the commits went <em>top 8 by commit count</em></h2>
+    <div class="inner">
+      <div class="bars">
+        <div class="bar-row"><span class="name">fraud-watch</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="n">98</span></div>
+        <div class="bar-row"><span class="name">risk-swarm</span><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><span class="n">90</span></div>
+        <div class="bar-row"><span class="name">jeevan-0508.github.io</span><div class="bar-track"><div class="bar-fill" style="width:71%"></div></div><span class="n">70</span></div>
+        <div class="bar-row"><span class="name">nightfall-zero</span><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><span class="n">60</span></div>
+        <div class="bar-row"><span class="name">FOMO</span><div class="bar-track"><div class="bar-fill" style="width:56%"></div></div><span class="n">55</span></div>
+        <div class="bar-row"><span class="name">scale-of-everything</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><span class="n">29</span></div>
+        <div class="bar-row"><span class="name">eu-ai-act-scanner</span><div class="bar-track"><div class="bar-fill" style="width:26%"></div></div><span class="n">25</span></div>
+        <div class="bar-row"><span class="name">gdpr-compliance-scanner</span><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><span class="n">19</span></div>
+      </div>
+      <p class="note" style="margin-top:14px">Counted straight from <code>git rev-list --count HEAD</code>
+      on every repository, the same afternoon this page was written. No project's number is rounded up.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Why bother writing this down</h2>
+    <div class="inner closing">
+      <p>Most of what a job search asks you to prove &mdash; that you can learn fast, ship honestly, and
+      not flinch from a number you don't like &mdash; doesn't show up on a resume line. It shows up in
+      600 commits across 29 repositories in 22 days, in a fraud classifier that reported its own 100%
+      score as a bug instead of a win, in a control room that re-tiers every obligation the moment one
+      honest fact about a system changes.</p>
+      <p>None of this replaces five years of catching real fraud on real freight lanes. It's the other
+      half: proof that the judgement from those five years survives being written down as something a
+      stranger can run, read, and argue with.</p>
+      <p>Two days left as I write this. The tools stay up. <a href="../">Back to the main page &rarr;</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Built as static HTML with no dependencies and no tracking. <a href="https://github.com/Jeevan-0508/jeevan-0508.github.io">Source of this page</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
