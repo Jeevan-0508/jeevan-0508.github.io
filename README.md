@@ -2,6 +2,27 @@
 
 Source of the portfolio page: **https://jeevan-0508.github.io**
 
+The portfolio is positioned for recruiter conversations across Germany: risk management,
+AI governance, fraud intelligence, programme management, and practical automation. The page
+keeps its existing evidence-first project map while making the professional identity, opportunity
+focus, featured systems, and contact routes clear within the first screen.
+
+The recruiter-facing sections are implemented in the dependency-free `index.html` and `style.css`:
+
+- Hero positioning and working-location context.
+- Why this profile: enterprise risk, AI governance, and programme delivery.
+- Proof in practice: verified scope without invented performance claims.
+- Featured systems ordered for a recruiter-first read.
+- Germany-focused opportunities and direct contact links.
+
+No deployment is performed by local development work. From the repository root, preview locally with:
+
+```powershell
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000/`. The site has no build step or runtime dependency.
+
 The page presents one engineering identity—AI risk intelligence—through separate, inspectable instruments:
 
 | Instrument | Role |
